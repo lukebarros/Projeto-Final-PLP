@@ -28,7 +28,7 @@ while True: # Loop para realização das tarefas
         criar()
         tamakeys = list(tama) # Criação de lista baseada no dict "tama" para mostrar as opções disponiveis
     elif i == 2:
-        k = input(f'Tamagotchi Disponíveis: {tamakeys[0]}, {tamakeys[len(tamakeys)-1]}\n')
+        k = input(f'Tamagotchi Disponíveis: {str(tamakeys)[1:-1]}\n')
         k = tama[k]
         op = int(input('Dados:\n[1] Nome\n[2] Fome\n[3] Saúde\n[4] Idade\n[5] Todos\n\n'))
         if op == 1:
@@ -47,7 +47,7 @@ while True: # Loop para realização das tarefas
             print(k)
             sleep(2)
     elif i == 3:
-        n = input(f'Tamagotchi Disponíveis: {tamakeys[0]}, {tamakeys[len(tamakeys)-1]}\n')
+        n = input(f'Tamagotchi Disponíveis: {str(tamakeys)[1:-1]}\n')
         j = int(input('Selecione o atributo para alteração:\n[1] Nome\n[2] Fome\n[3] Saúde\n[4] Idade\n[5] Voltar\n\n'))
         if j == 1:
             novonome = input('Digite o novo nome do tamagotchi: ')
